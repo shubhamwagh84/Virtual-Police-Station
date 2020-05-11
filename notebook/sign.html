@@ -1,0 +1,58 @@
+
+  <!-- <link rel="stylesheet" href="../css/signature-pad.css"> -->
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39365077-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  <div id="signature-pad" class="signature-pad">
+    <div class="signature-pad--body">
+      <canvas id="signature" style="border-width: 1px;border-style: solid;"></canvas>
+    </div>
+    <div class="signature-pad--footer">
+      <div class="description" style="color: red; font-weight: bold">Sign above</div>
+
+      <div class="signature-pad--actions">
+        <div class="row">
+           <select id="language">
+                <option value="en-IN">English</option>
+               <option value="hi-IN">Hindi</option>
+            </select>
+              <button type="button" id="btnPrint" class="ml-2">Print</button> 
+          <button type="button" class="button clear ml-2" data-action="clear" >Clear</button>
+           <button type="button" class="button save ml-2" onclick="imageclick()" id="cfm">confirm sign</button>
+            <button type="button" class="button save ml-2" id="sign" >confirm sign</button>
+           
+        </div>
+     
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+  document.getElementById('sign').style.display = 'none';
+  function imageclick(){
+     var el = document.getElementById('result').offsetHeight/25;
+     if(el > 0){
+         document.getElementById("imgsaveSignature").style.display = "block";
+      var mycanvas = document.getElementById("signature"); //get your canvas
+        var image = mycanvas.toDataURL("image/png"); //Convert
+        document.getElementById("imgsaveSignature").src = image;
+     }
+    else{
+      alert("please first register your complaint.");
+    }
+        
+}
+</script>
+  <script src="js/signature_pad.umd.js"></script>
+  <script src="js/app.js"></script>
+
