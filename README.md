@@ -1,0 +1,2 @@
+# Virtual-Police-Station
+• Aiming to interact with victim to take all the detail using Speech Recognition System, for the victim        Authentication used digital signature, after information submitted by the victim then make it into FIR format Automatically. This FIR would routed to CCTNS System (State Centre Server) and then this FIR send to nearest police  station.Authentication based on aadhar number. 
